@@ -8,14 +8,20 @@
 	<link rel="stylesheet" href="<?= base_url('assets/css/styles.css'); ?>">
 
 	<title><?= $title; ?></title>
-</head>
 
+</head>
 <body>
-  <nav class="navbar bg-body-tertiary mb-4">
-    <div class="container-fluid">
-      <a class="navbar-brand" href="<?= base_url('Home/index'); ?>">
-        <!-- <img src="#" alt="Logo" width="30" height="24" class="d-inline-block align-text-top"> -->
-        Pustaka Booking
-      </a>
-    </div>
+  <!-- Navbar -->
+  <nav class="navbar bg-body-tertiary">
+      <div class="container-fluid">
+          <button class="navbar-toggler" type="button" id="sidebarToggle">
+              <span class="navbar-toggler-icon"></span>
+          </button>
+          <a class="navbar-brand" href="<?= base_url('Home/index'); ?>">
+              Pustaka Booking
+          </a>
+          <div>
+              Halo, <?= $users['name']; ?>
+          </div>
+      </div>
   </nav>

@@ -1,21 +1,60 @@
-.form-container {
+/* Adjustments to prevent overlap */
+body {
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    padding-top: 56px;
+    padding-left: 0;
+}
+main {
+    flex-grow: 1;
+    padding-top: 56px; /* Height of navbar */
+    display: flex;
+}
+/* Navbar */
+.navbar {
+    z-index: 1000; /* Ensure navbar is above sidebar */
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    margin-bottom: 4rem !important;
 }
 
-.container {
-    max-width: 90%;
+.navbar-toggler {
+    display: hidden;
+    border: none !important;
 }
 
-td {
-    text-align: left;
+/* Sidebar */
+#sidebarMenu {
+    z-index: 900; /* Lower z-index than navbar */
+    position: fixed;
+    top: 56px; /* Height of navbar */
+    bottom: 0;
+    left: -250px; /* Hide the sidebar by default */
+    width: 250px;
+    overflow-y: auto; /* Enable scrolling */
+    background-color: #f0f0f0;
+    box-shadow: #d1d1d1;
+    transition: left 0.3s; /* Smooth transition effect */
 }
 
-.card-header {
-    text-align: center !important;
+
+#sidebarMenu:hover + body {
+    padding-left: 250px; /* Lebar sidebar pada layar besar */
 }
 
-.card {
-    text-align: center;
+/* Main content area */
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+@media (min-width: 992px) {
+
+
+    .navbar-toggler {
+        border: none !important;
+    }
 }

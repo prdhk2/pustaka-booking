@@ -1,5 +1,6 @@
 <div class="container">
-    <form action="<?= base_url('Home/index'); ?>">
+halaman hasil
+    <!-- <form action="<?= base_url('Home/index'); ?>">
         <table style="text-align:center;">
             <tr>
                 <td>
@@ -36,5 +37,5 @@
             </tr>
         </table>
         <button type="submit" class="btn btn-primary">Kembali</button>
-    </form>
+    </form> -->
 </div>
