@@ -1,3 +1,5 @@
+<?= var_dump($user); ?>
+
 <h2 style="text-align:center">Form Input Matakuliah</h2>
 <hr style="max-width:50%; margin:auto; margin-bottom:2rem;">
 <div class ="form-container">

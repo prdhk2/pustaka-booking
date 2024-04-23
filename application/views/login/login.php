@@ -35,11 +35,10 @@
         <div class="card">
             <div class="card-body">
                 <h2 class="card-title">Login Admin</h2>
-                <?php if ($error) : ?>
+                <!--  -->
                     <div class="alert alert-danger" role="alert">
                         Username atau Password Salah!
                     </div>
-                <?php endif; ?>
                 <form action="<?= base_url('login_c/login'); ?>" method="post">
                     <div class="mb-3">
                         <label for="username" class="form-label">Masukan Username :</label>

@@ -5,10 +5,13 @@ class Home extends CI_Controller {
 
 	public function index()
 	{
+
+		$this->load->model('Def_models');
+		$data['users'] = $this->Def_models->get_data();
 		$data['title'] = 'Beranda';
 
 		$this->load->view('template/header.php', $data);
-		$this->load->view('home.php');
+		$this->load->view('home.php', $data);
 		$this->load->view('template/footer.php');
 	}
 
