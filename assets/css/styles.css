@@ -4,7 +4,6 @@ body {
     flex-direction: column;
     min-height: 100vh;
     padding-top: 56px;
-    padding-left: 0;
 }
 main {
     flex-grow: 1;
@@ -39,21 +38,26 @@ main {
     box-shadow: #d1d1d1;
     transition: left 0.3s; /* Smooth transition effect */
 }
+#sidebarMenu:hover {
+    left: 0;
+}
 
-
-#sidebarMenu:hover + body {
-    padding-left: 250px; /* Lebar sidebar pada layar besar */
+.sidebar-active {
+    padding-left: 250px;
 }
 
 /* Main content area */
-.content {
+.main-content {
     flex-grow: 1;
     padding: 20px;
+    max-width: 80%;
+}
+
+.form-container {
+    text-align: center;
 }
 
 @media (min-width: 992px) {
-
-
     .navbar-toggler {
         border: none !important;
     }

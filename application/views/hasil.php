@@ -1,4 +1,4 @@
-<div class="container">
+<div class="main-content">
 halaman hasil
     <!-- <form action="<?= base_url('Home/index'); ?>">
         <table style="text-align:center;">

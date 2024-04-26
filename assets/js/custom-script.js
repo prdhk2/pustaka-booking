@@ -1,18 +1,25 @@
-// toggler button action
+// Toggler button action
 function toggleSidebar() {
     var sidebar = document.getElementById("sidebarMenu");
     var isOpen = sidebar.style.left === "0px";
 
+    // Mengambil elemen body
+    var body = document.querySelector('body');
+
     // Jika sidebar sedang terbuka, tutup
     if (isOpen) {
         sidebar.style.left = "-250px";
+        body.classList.remove('sidebar-active');
     } else { // Jika sidebar sedang tertutup, buka
         sidebar.style.left = "0";
+        body.classList.add('sidebar-active');
     }
 }
+
+// Panggil fungsi toggleSidebar saat tombol sidebarToggle diklik
 document.getElementById("sidebarToggle").addEventListener("click", toggleSidebar);
 
-// sidebar active menu
+// Sidebar active menu
 function setActiveMenu() {
     // Mendapatkan URL halaman saat ini
     var currentPageUrl = window.location.href;
@@ -36,8 +43,20 @@ function setActiveMenu() {
     });
 }
 
-// Panggil fungsi saat halaman dimuat
+// Panggil fungsi setActiveMenu saat halaman dimuat
 window.addEventListener("DOMContentLoaded", setActiveMenu);
 
+// Tambahkan event listener untuk klik pada elemen body
+document.body.addEventListener('click', function(event) {
+    var sidebar = document.getElementById('sidebarMenu');
+    var body = document.querySelector('body');
 
-
+    // Periksa apakah yang diklik berada di luar area sidebar
+    if (!sidebar.contains(event.target)) {
+        var isOpen = sidebar.style.left === "0px";
+        if (isOpen) {
+            sidebar.style.left = "-250px";
+            body.classList.remove('sidebar-active');
+        }
+    }
+});

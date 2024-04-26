@@ -1,13 +1,10 @@
 <!-- start content -->
 <div class="main-content">
-    <center>
-
-        Halaman Utama
-    </center>
-    <!-- <h2 style="text-align:center">Form Input Matakuliah</h2>
+<!-- Halaman Utama -->
+    <h2 style="text-align:center">Form Input Matakuliah</h2>
     <hr style="max-width:50%; margin:auto; margin-bottom:2rem;">
-    <div class ="form-container"> -->
-        <!-- <form method="POST" action="<?= base_url('Home/hasil'); ?>">
+    <div class ="form-container">
+        <form method="POST" action="<?= base_url('Home/hasil'); ?>">
             <table style="text-align:center;">
                 <tr>
                     <td>
@@ -48,8 +45,8 @@
                 </tr>
             </table>
             <button type="submit" class="btn btn-primary">Submit</button>
-        </form> -->
-    <!-- </div> -->
+        </form>
+   </div>
 </div>
 <!-- end content -->
 
