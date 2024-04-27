@@ -5,7 +5,7 @@
     <hr style="max-width:50%; margin:auto; margin-bottom:2rem;">
     <div class ="form-container">
         <form method="POST" action="<?= base_url('Home/hasil'); ?>">
-            <table style="text-align:center;">
+            <table>
                 <tr>
                     <td>
                         <h5>Kode Mata Kuliah</h5>
@@ -35,11 +35,11 @@
                     <td>
                         :
                     </td>
-                    <td>
+                    <td style="text-align:left;">
                         <select name="sks" required>
-                            <option value="2">2</option>
-                            <option value="3">3</option>
-                            <option value="4">4</option>
+                            <?php foreach ($mtk as $a): ?>
+                                <option value="<?= $a['sks']; ?>" name="sks"><?= $a['sks']; ?></option>
+                            <?php endforeach; ?>
                         </select>
                     </td>
                 </tr>

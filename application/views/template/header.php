@@ -8,6 +8,7 @@
 	<link rel="stylesheet" href="<?= base_url('assets/fontawesome/css/all.min.css'); ?>"> 
 
 	<link rel="stylesheet" href="<?= base_url('assets/bootstrap5/css/bootstrap.min.css'); ?>">
+
 	<link rel="stylesheet" href="<?= base_url('assets/css/styles.css'); ?>">
 
 	<title><?= $title; ?></title>
@@ -17,7 +18,7 @@
 <!-- Navbar -->
 <nav class="navbar bg-body-tertiary">
     <div class="container-fluid">
-      <button class="navbar-toggler" type="button" id="sidebarToggle">
+      <button class="navbar-toggler" type="button" onclick="openNav()" id="sidebarToggle">
           <span class="navbar-toggler-icon"></span>
       </button>
 

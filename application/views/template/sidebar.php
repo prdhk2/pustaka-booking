@@ -1,5 +1,5 @@
 <!-- Sidebar -->
-<nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
+<!-- <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-white">
   <div class="position-sticky">
     <div class="list-group list-group-flush mx-3 mt-4">
       <a href="<?= base_url('home/index'); ?>" class="list-group-item list-group-item-action py-2 ripple active" aria-current="true" >
@@ -29,5 +29,13 @@
       </a>
     </div>
   </div>
-</nav>
+</nav> -->
+
+<div id="mySidebar" class="sidebar">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+  <a href="<?= base_url('Home/index'); ?>">Dashboard</a>
+  <a href="<?= base_url('Home/mtk'); ?>">Mata Kuliah</a>
+  <a href="#">Dosen</a>
+  <a href="#">Log Out</a>
+</div>
 <!-- Sidebar -->
